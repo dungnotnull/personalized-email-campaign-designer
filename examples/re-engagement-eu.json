@@ -1,0 +1,49 @@
+{
+  "objective": "Win back inactive subscribers (EU)",
+  "campaign_type": "re-engagement",
+  "audience_description": "Lapsed SaaS users inactive >90 days",
+  "jurisdiction": "EU",
+  "sender_domain": "mail.example.com",
+  "consent_basis": "legitimate interest (soft opt-in, prior customer relationship)",
+  "goals": [
+    "reactivate 5% of lapsed users"
+  ],
+  "offline": true,
+  "segments": [
+    {
+      "name": "Champions-Lapsed",
+      "description": "High value lapsed",
+      "rfm_label": "Champions",
+      "size": 1200,
+      "personalization_tokens": [
+        "first_name",
+        "last_login"
+      ]
+    },
+    {
+      "name": "At-Risk",
+      "description": "Recent drop-off",
+      "rfm_label": "At Risk",
+      "size": 3000,
+      "personalization_tokens": [
+        "first_name",
+        "plan"
+      ]
+    }
+  ],
+  "emails": [
+    {
+      "position": 1,
+      "name": "We miss you",
+      "segment": "At-Risk",
+      "subject_line": "{{first_name}}, your account misses you",
+      "preview_text": "Come back and pick up where you left off - we saved your work.",
+      "body": "Hi {{first_name}}, we noticed you haven't logged in for a while. Here is why your work is still safe. We built a faster way back. Start your return today.",
+      "cta_primary": "Reactivate my account",
+      "send_delay_days": 0,
+      "has_unsubscribe": true,
+      "has_physical_address": true,
+      "has_consent_basis": true
+    }
+  ]
+}

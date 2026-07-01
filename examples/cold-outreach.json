@@ -1,0 +1,38 @@
+{
+  "objective": "B2B cold outreach to procurement leads",
+  "campaign_type": "cold-outreach",
+  "audience_description": "Purchased B2B procurement list",
+  "jurisdiction": "US",
+  "sender_domain": "outreach.example.com",
+  "goals": [
+    "book 10 demos"
+  ],
+  "offline": true,
+  "segments": [
+    {
+      "name": "Procurement-Leads",
+      "description": "Procurement decision-makers",
+      "rfm_label": "New",
+      "size": 800,
+      "personalization_tokens": [
+        "company",
+        "first_name"
+      ]
+    }
+  ],
+  "emails": [
+    {
+      "position": 1,
+      "name": "Intro",
+      "segment": "Procurement-Leads",
+      "subject_line": "Quick idea for {{company}}",
+      "preview_text": "A 15-min cost-savings review for procurement teams.",
+      "body": "Hi {{first_name}}, we help procurement teams cut software spend. Here is why it matters. We built a 15-min review. Book your slot now.",
+      "cta_primary": "Book a 15-min review",
+      "send_delay_days": 0,
+      "has_unsubscribe": true,
+      "has_physical_address": true,
+      "has_consent_basis": true
+    }
+  ]
+}

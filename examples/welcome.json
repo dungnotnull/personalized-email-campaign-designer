@@ -1,0 +1,51 @@
+{
+  "objective": "Activate new signups in the first 14 days",
+  "campaign_type": "welcome",
+  "audience_description": "New free-trial signups",
+  "jurisdiction": "US",
+  "sender_domain": "mail.example.com",
+  "goals": [
+    "reach 40% trial-to-paid"
+  ],
+  "offline": true,
+  "segments": [
+    {
+      "name": "New-Trial",
+      "description": "Brand new free-trial signups",
+      "rfm_label": "New",
+      "size": 5000,
+      "personalization_tokens": [
+        "first_name",
+        "signup_date"
+      ]
+    }
+  ],
+  "emails": [
+    {
+      "position": 1,
+      "name": "Welcome + setup",
+      "segment": "New-Trial",
+      "subject_line": "{{first_name}}, welcome - let's get you set up",
+      "preview_text": "Your workspace is ready. 3 steps to your first project.",
+      "body": "Hi {{first_name}}, welcome aboard. Here is why teams choose us. Discover the 3-step setup. Start your first project today.",
+      "cta_primary": "Start setup",
+      "send_delay_days": 0,
+      "has_unsubscribe": true,
+      "has_physical_address": true,
+      "has_consent_basis": true
+    },
+    {
+      "position": 2,
+      "name": "Value proof",
+      "segment": "New-Trial",
+      "subject_line": "How {{first_name}}'s team got 2x faster",
+      "preview_text": "A short guide to your power features.",
+      "body": "Here is why our power features save time. We built them for teams like yours. Get the guide now and start today.",
+      "cta_primary": "Read the guide",
+      "send_delay_days": 3,
+      "has_unsubscribe": true,
+      "has_physical_address": true,
+      "has_consent_basis": true
+    }
+  ]
+}
